@@ -9,13 +9,13 @@ on:
         description: 'Version to publish (leave empty to use package.json version)'
         required: false
 
-permissions:
-      id-token: write  # Required for OIDC authentication
-      contents: read
-
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # Required for OIDC authentication
+      contents: read
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,6 +24,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Update npm to latest
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         run: npm install
