@@ -1,0 +1,11 @@
+# Don't publish these files to npm
+.env
+.env.example
+node_modules/
+.git/
+.gitignore
+*.log
+test/
+tests/
+.vscode/
+.idea/

@@ -1,0 +1,43 @@
+{
+  "name": "dotenv-to-example",
+  "version": "1.0.0",
+  "description": "Generate .env.example files from .env files by removing sensitive values",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "dotenv-to-example": "./cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dotenv",
+    "env",
+    "environment",
+    "example",
+    "env-example",
+    "environment-variables",
+    "cli",
+    "tool"
+  ],
+  "author": "blaxkxanax",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blaxkxanax/dotenv-to-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blaxkxanax/dotenv-to-example/issues"
+  },
+  "homepage": "https://github.com/blaxkxanax/dotenv-to-example#readme",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
