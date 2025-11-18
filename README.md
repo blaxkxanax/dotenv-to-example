@@ -23,20 +23,49 @@ npm install dotenv-to-example
 Navigate to your project directory and run:
 
 ```bash
-dotenv-to-example
+dotenv-to-example [options]
 ```
+
+#### Options:
+
+- `-r, --recursive` - Process all `.env` files recursively without prompting
+- `-h, --help` - Show help message
 
 #### Behavior:
 
 - If **one** `.env` file is found, it automatically creates a `.env.example` file
-- If **multiple** `.env` files are found, it prompts you to convert all or just the one in the current directory
+- If **multiple** `.env` files are found:
+  - **Without `-r` flag**: Prompts you to convert all or just the one in the current directory
+  - **With `-r` flag**: Automatically converts all files without prompting
 
-#### Example:
+#### Examples:
 
+```bash
+# Interactive mode (prompts if multiple files found)
+dotenv-to-example
+
+# Process all .env files recursively without prompting
+dotenv-to-example -r
+
+# Show help
+dotenv-to-example --help
+```
+
+**Example output:**
 ```bash
 cd /path/to/your/project
 dotenv-to-example
 # Output: Created: /path/to/your/project/.env.example
+
+# With multiple files and recursive flag
+dotenv-to-example -r
+# Output:
+# Multiple .env files found:
+#  - /path/to/project/.env
+#  - /path/to/project/backend/.env
+# Processing all files (recursive mode)...
+# Created: /path/to/project/.env.example
+# Created: /path/to/project/backend/.env.example
 ```
 
 ### Programmatic Usage (JavaScript)
