@@ -1,6 +1,6 @@
 {
   "name": "dotenv-to-example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Generate .env.example files from .env files by removing sensitive values",
   "main": "index.js",
   "types": "index.d.ts",
