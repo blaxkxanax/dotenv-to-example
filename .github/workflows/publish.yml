@@ -9,13 +9,13 @@ on:
         description: 'Version to publish (leave empty to use package.json version)'
         required: false
 
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    permissions:
+permissions:
       id-token: write  # Required for OIDC authentication
       contents: read
 
+jobs:
+  publish:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,7 +23,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         run: npm ci || npm install
